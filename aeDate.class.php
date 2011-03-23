@@ -1,6 +1,9 @@
 <?php
 namespace aeHelpers;
 
+use \Exception;
+use \DateTime;
+
 /**
  * Expands and enriches the DateTime build-in class
  * 
@@ -47,8 +50,7 @@ namespace aeHelpers;
  * Magical methods defined:
  * 	- __toString()
  * 	- __get()
- * 
- * @author    David Powers 
+ *  
  * @author    Andrey Esaulov 
  * @license		GPL
  * @version   1.0
