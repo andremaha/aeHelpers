@@ -1,4 +1,6 @@
 <?php
+namespace aeHelpers;
+
 /**
  * Expands and enriches the DateTime build-in class
  * 
@@ -51,7 +53,7 @@
  * @license		GPL
  * @version   1.0
  */
-class aeDate extends DateTime 
+class Date extends DateTime 
 {
 	
 	protected $_year;
@@ -68,12 +70,12 @@ class aeDate extends DateTime
 	 * 	- a positive number, if the $startDate < (earlier) $endDate
 	 * 	- a negative number, if the $startDate > (later) $endDate
 	 * 
-	 * @param aeDate $startDate		The aeDate object to start calculations with
-	 * @param aeDate $endDate			The aeDate object to finish calculations with
+	 * @param Date $startDate		The Date object to start calculations with
+	 * @param Date $endDate			The Date object to finish calculations with
 	 * 
 	 * @return	Amount of days left (positive number) / gone (negativ number)
 	 */
-	static public function dateDiff(aeDate $startDate, aeDate $endDate)
+	static public function dateDiff(Date $startDate, Date $endDate)
 	{
 		// Make a unix timestamp from start date
 		$start = gmmktime(0, 0, 0, $startDate->_month, $startDate->_day, $startDate->_year);
@@ -225,7 +227,7 @@ class aeDate extends DateTime
 	 *   - MM.DD.YYYY
 	 *   - MM DD YYYY
 	 * Method then checks the input data and passes the year, month and day
-	 * to the customized aeDate::setDate() method, where additional checks
+	 * to the customized Date::setDate() method, where additional checks
 	 * are performed
 	 * 
 	 * @param    int   $USdate     Defines the date in the US-Format: MM/DD/YYYY
@@ -261,7 +263,7 @@ class aeDate extends DateTime
    *   - DD.MM.YYYY
    *   - DD MM YYYY
    * Method then checks the input data and passes the year, month and day
-   * to the customized aeDate::setDate() method, where additional checks
+   * to the customized Date::setDate() method, where additional checks
    * are performed
    * 
    * @param    int   $EUdate     Defines the date in the EU-Format: DD/MM/YYYY
@@ -298,7 +300,7 @@ class aeDate extends DateTime
    *   - YYYY MM DD
    *   - YYYY.MM.DD
    * Method then checks the input data and passes the year, month and day
-   * to the customized aeDate::setDate() method, where additional checks
+   * to the customized Date::setDate() method, where additional checks
    * are performed
    * 
    * @param    int   $MySQLDate     Defines the date in the MySQL-Format: YYYY-MM-DD
@@ -693,7 +695,7 @@ class aeDate extends DateTime
 	 * end up with default behaviour of DateTime::modify():
 	 * 	- 31. August 2008 - 18 Months
 	 * 		- DateTime - March 3rd, 2007
-	 * 		- aeDate   - February 28th, 2007
+	 * 		- Date   - February 28th, 2007
 	 * 
 	 * @param		$numMonths		int			An amount of months to subtract
 	 * 
@@ -845,7 +847,7 @@ class aeDate extends DateTime
 	}
 	
 	/**
-	 * Defines the default output format of the aeDate object
+	 * Defines the default output format of the Date object
 	 * 
 	 * Default output is Thursday, 3rd Marz, 2011
 	 * 
