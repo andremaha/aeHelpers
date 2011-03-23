@@ -16,3 +16,14 @@ Contents:
 		- Get a date
 			$date = new aeDate();
 			$date->getDMY();
+			
+	- Validator
+	   !WORK IN PROGRESS!
+	   Simplifies the interface of the php build-in validators
+
+     Ever felt overwhelmed with those flags: FILTER_VALIDATE_INT, 
+     FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION etc.?
+     Then this class is for you.
+     Simply define the filter type through the user-friendly 
+     interface and take the advantage of the versatile 
+     build-in validators.
