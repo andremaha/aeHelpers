@@ -1,3 +1,5 @@
+# aeHelpers / classes for your everyday web work that just work
+
 aeHelpers are the set of the helper-classes that can be used to solve
 day-to-day issues of an average web-worker.
 
